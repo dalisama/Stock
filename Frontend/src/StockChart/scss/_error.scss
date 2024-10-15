@@ -1,0 +1,119 @@
+/* src/scss/_error.scss */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    background: $background-color;
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    animation: fadeInError 0.6s ease forwards;
+  
+    /* Header Styling within Error Container */
+    h2 {
+      font-size: 32px;
+      color: $secondary-color;
+      margin-bottom: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: slideDownError 0.5s ease forwards;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+  
+      /* Optional Icon Styling */
+      .icon {
+        font-size: 1.5em;
+        animation: bounceIcon 1s infinite;
+      }
+  
+      /* Responsive Font Size */
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 24px;
+      }
+    }
+  
+    /* Paragraph Styling within Error Container */
+    p {
+      font-size: 20px;
+      color: #555555;
+      margin-bottom: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeInText 0.7s ease forwards;
+      max-width: 600px;
+  
+      /* Responsive Font Size */
+      @media (max-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+    }
+  
+    /* Retry Button Styling within Error Container */
+    .retry-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: $primary-color;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  
+      /* Button Hover Effect */
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      /* Button Active Effect */
+      &:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+  
+      /* Disabled State */
+      &:disabled {
+        background-color: lighten($primary-color, 30%);
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: translateY(0);
+      }
+  
+      /* Optional Button Icon Styling */
+      .button-icon {
+        font-size: 1.2em;
+      }
+  
+      /* Responsive Font Size and Padding */
+      @media (max-width: 768px) {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+  
+      @media (max-width: 480px) {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+    }
+  }
+  

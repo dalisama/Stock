@@ -1,0 +1,98 @@
+/* src/scss/_responsive.scss */
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .stock-chart {
+      padding: 15px;
+    }
+  
+    /* Adjust loading container for smaller screens */
+    .loading-container {
+      padding: 50px 30px;
+  
+      .spinner {
+        width: 40px;
+        height: 40px;
+  
+        .wheel {
+          width: 32px;
+          height: 32px;
+          margin: -16px 0 0 -16px;
+          border-width: 3px;
+        }
+      }
+  
+      p {
+        font-size: 18px;
+      }
+    }
+  
+    /* Adjust error container for smaller screens */
+    .error-container {
+      padding: 50px 30px;
+  
+      h2 {
+        font-size: 28px;
+      }
+  
+      p {
+        font-size: 18px;
+      }
+  
+      .retry-button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  
+    /* Other adjustments as needed */
+  }
+  
+  @media (max-width: 480px) {
+    .stock-chart {
+      padding: 10px;
+    }
+  
+    /* Further adjust loading container for mobile devices */
+    .loading-container {
+      padding: 40px 20px;
+  
+      .spinner {
+        width: 30px;
+        height: 30px;
+  
+        .wheel {
+          width: 24px;
+          height: 24px;
+          margin: -12px 0 0 -12px;
+          border-width: 2px;
+        }
+      }
+  
+      p {
+        font-size: 16px;
+      }
+    }
+  
+    /* Adjust error container for mobile devices */
+    .error-container {
+      padding: 40px 20px;
+  
+      h2 {
+        font-size: 24px;
+      }
+  
+      p {
+        font-size: 16px;
+      }
+  
+      .retry-button {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+    }
+  
+    /* Other adjustments as needed */
+  }
+  

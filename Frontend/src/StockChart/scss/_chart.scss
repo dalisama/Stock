@@ -1,0 +1,88 @@
+/* src/scss/_chart.scss */
+
+.stock-chart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    box-sizing: border-box;
+  
+    /* Chart Container Styling */
+    .chart-container {
+      width: 100%;
+      max-width: 1200px;
+      background: $background-color;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      position: relative; /* Ensures tooltip is positioned relative to this container */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+      }
+  
+      svg {
+        border-radius: 8px;
+        overflow: visible;
+      }
+    }
+  
+    /* SVG Styling */
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Axis Styling */
+    .x-axis path,
+    .y-axis path,
+    .x-axis line,
+    .y-axis line {
+      stroke: #e0e0e0;
+    }
+  
+    .x-axis text,
+    .y-axis text {
+      font-size: 12px;
+      fill: #666666;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    .axis-label {
+      font-size: 14px;
+      fill: $text-color;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    /* Gridlines Styling */
+    .grid line {
+      stroke: #e0e0e0;
+      stroke-opacity: 0.7;
+    }
+  
+    .grid path {
+      stroke-width: 0;
+    }
+  
+    .grid--x line,
+    .grid--y line {
+      stroke-dasharray: 4, 4;
+    }
+  
+    /* Data Point (Dot) Styling */
+    .dot {
+      cursor: pointer;
+      transition: r 0.3s, fill 0.3s, stroke 0.3s, stroke-width 0.3s;
+  
+      &:hover {
+        stroke: #000;
+        stroke-width: 1px;
+      }
+    }
+  }
+  

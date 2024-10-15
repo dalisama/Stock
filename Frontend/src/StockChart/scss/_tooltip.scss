@@ -1,0 +1,53 @@
+/* src/scss/_tooltip.scss */
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    border-radius: 8px;
+    pointer-events: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+    display: none; /* Hide tooltip by default */
+    max-width: 220px;
+    word-wrap: break-word;
+  
+    /* Tooltip Arrow */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px; /* Adjust based on tooltip position */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+    }
+  
+    /* Trend Icons */
+    .tooltip-trend-icon {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 20px;
+      animation: fadeInIcon 0.5s ease forwards;
+    }
+  
+    .tooltip-trend-icon.up {
+      color: $success-color; /* Green */
+    }
+  
+    .tooltip-trend-icon.down {
+      color: $error-color; /* Red */
+    }
+  
+    .tooltip-trend-icon.neutral {
+      color: $neutral-color; /* Blue */
+    }
+  }
+  
