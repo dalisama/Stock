@@ -119,11 +119,11 @@
       margin-bottom: 10px;
   
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: mix(black, $primary-color, 10%);
       }
   
       &:disabled {
-        background-color: lighten($primary-color, 20%);
+        background-color: mix(white,$primary-color, 20%);
         cursor: not-allowed;
       }
     }
@@ -132,11 +132,11 @@
       background-color: $error-color;
   
       &:hover {
-        background-color: darken($error-color, 10%);
+        background-color: mix(black,$error-color, 10%);
       }
   
       &:disabled {
-        background-color: lighten($error-color, 20%);
+        background-color: mix(white,$error-color, 20%);
         cursor: not-allowed;
       }
     }

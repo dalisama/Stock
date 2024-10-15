@@ -220,28 +220,28 @@ function StockChart({ dataUrl = '/stocks' }) {
       containerWidth,
       containerHeight
     ) => {
-      let left = posX + 10;
-      let top = posY - tooltipHeight - 10;
+      let left = posX + tooltipWidth ;
+      let top = posY -tooltipHeight ;
 
-      // Prevent tooltip from overflowing to the right
-      if (left + tooltipWidth > containerWidth) {
-        left = posX - tooltipWidth - 10;
-      }
+      // // Prevent tooltip from overflowing to the right
+      // if (left + tooltipWidth > containerWidth) {
+      //   left = posX - tooltipWidth - 10;
+      // }
 
-      // Prevent tooltip from overflowing to the top
-      if (top < 0) {
-        top = posY + 10;
-      }
+      // // Prevent tooltip from overflowing to the top
+      // if (top < 0) {
+      //   top = posY + 10;
+      // }
 
-      // Prevent tooltip from overflowing to the left
-      if (left < 0) {
-        left = 10;
-      }
+      // // Prevent tooltip from overflowing to the left
+      // if (left < 0) {
+      //   left = 10;
+      // }
 
-      // Prevent tooltip from overflowing to the bottom
-      if (top + tooltipHeight > containerHeight) {
-        top = containerHeight - tooltipHeight - 10;
-      }
+      // // Prevent tooltip from overflowing to the bottom
+      // if (top + tooltipHeight > containerHeight) {
+      //   top = containerHeight - tooltipHeight - 10;
+      // }
 
       return { left, top };
     };

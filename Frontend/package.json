@@ -14,10 +14,12 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "sass": "^1.79.5",
-    "web-vitals": "^2.1.4"
+    "sass-loader": "^16.0.2",
+    "web-vitals": "^2.1.4",
+    "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
@@ -47,10 +49,10 @@
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-transform-stub": "^2.0.0",
     "react-test-renderer": "^18.3.1"
   }
-  
 }
